@@ -1,0 +1,39 @@
+
+.logo img{
+    max-width: 80px;
+    max-height: 80px;
+    margin-top: 16px;
+}
+
+.movableLogo{
+    margin-top: 16px;
+    max-width: 62px;
+    max-height: 62px;
+}
+.navBar{
+    display: flex;
+    gap: 53px;
+}
+
+.navBar div a {
+    color: white;
+}
+
+.mainBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: auto;
+}
+
+.points {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px; 
+}
+
+.points:hover {
+    text-decoration: 2px underline;
+    text-decoration-color: #961914;
+}
