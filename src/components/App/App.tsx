@@ -7,6 +7,8 @@ import styles from './appStyles.module.css'
 import {WhyZoov} from '../WhyZoov/WhyZoov'
 import {CareAndLove} from '../CareAndLove/CareAndLove'
 import {HowToGetZoov} from '../HowToGetZoov/HowToGetZoov'
+import {Questions} from '../Questions/Questions'
+import { Footer } from '../Footer/Footer'
 export const App = () => {
     return (
         <div className={classNames(styles.mainBox)}>
@@ -16,6 +18,8 @@ export const App = () => {
             <WhyZoov/>
             <CareAndLove/>
             <HowToGetZoov/>
+            <Questions/>
+            <Footer/>
         </div>
     )
 }

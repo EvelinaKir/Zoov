@@ -1,0 +1,209 @@
+.mainBox{
+    display: grid;
+    background: center / cover no-repeat url('../../images/footer/background.svg');
+}
+
+.upperFooter {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+.lowerFooter{
+    background-color: #69120E ;
+    padding: 30px 0px;
+}
+.lowerFooter span {
+    color: #FFFFFF;
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 140%;
+opacity: 0.4;
+}
+.lowerFooter a{
+    color: #FFFFFF;
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 140%;
+opacity: 0.4;  
+}
+
+.contacts{
+    display: grid;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.contactsTitle {
+    font-family: Oswald;
+font-style: normal;
+font-weight: bold;
+font-size: 46px;
+line-height: 130%;
+color: #FFFFFF;
+}
+
+.contactsSubTitle{
+    color: #FFFFFF;
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 140%;
+}
+
+.contactsNumber {
+    font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 140%;
+color: #FFFFFF;
+margin-bottom: 24px;
+}
+
+.contacts button {
+    max-width: 223px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    color:  #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    max-height: 40px;
+}
+
+.contacts button span {
+    font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 140%;
+margin: 10px 16px 10px 8px;
+}
+
+.whatsAppButton{
+    margin-bottom: 16px;
+}
+
+.telegramButton {
+    margin-bottom: 40px;
+}
+
+.subscribe {
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 140%;
+color: #FFFFFF;
+}
+
+.contacts a {
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 140%;
+    color: white;
+    text-decoration: underline white;
+}
+
+
+.questionFieldHeader{
+    font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 140%;
+color: white;
+}
+
+.questionFieldSubHeader{
+    color: white;
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 140%;
+}
+
+.userInfo input {
+    width: 306px;
+}
+
+
+.userInfo input, .inputQestion textarea {
+    background: rgba(255, 255, 255, 0.06);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 140%;
+padding: 14px;
+border-radius: 8px;
+}
+
+.userInfo input::placeholder, .inputQestion textarea::-webkit-input-placeholder {
+    color:  rgba(255, 255, 255, 0.6);;
+}
+
+.userInfo input, select, textarea, .inputQestion textarea {
+    color: white;
+    outline: none;
+}
+
+
+.userInfo :nth-child(1){
+    margin-right: 24px;
+}
+.userInfo{
+    margin-bottom: 16px;
+    margin-top: 34px;
+}
+.questionFieldTitle{
+    display: grid;
+}
+
+.questionFieldSubHeader{
+    margin-top: 4px;
+}
+
+.questionFieldHeader{
+    margin-top: 110px;
+}
+
+.checkbox span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+color: #FFFFFF;
+margin-right: auto;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 22px;
+    margin-bottom: 76px;
+}
+
+.checkbox button {
+    background-color: white;
+    border: none;
+    color: #EC7973;
+    padding: 13px 54px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 140%;
+    border-radius: 8px;
+}
