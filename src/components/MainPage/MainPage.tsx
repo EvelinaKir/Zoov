@@ -6,7 +6,7 @@ import React, { FunctionComponent } from "react";
 export const MainPage = () => {
   return (
     <div className={classNames(mainPageStyles.box)}>
-      <div><AppHeader moveable={false} /></div>
+     <AppHeader moveable={false} />
       <div className={classNames(mainPageStyles.info)}>
         <span className={classNames(mainPageStyles.title)}>
           Питание,<br/> которое полюбит<br/> ваш хвостик

@@ -1,25 +1,25 @@
 .mainBox {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 90vh;
+    display: grid;
+    justify-content: center;
+
 }
 
 .textDescription{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 
 .text {
-    display: flex;
-    flex-direction: column;
-    max-width: 584px;
-    max-height: 413px;
+    display: grid;
+    margin-top: 235px;
+    margin-bottom: 135px;
 }
 
 .text span {
  display: block;
+ max-width: 584px;
+ max-height: 413px;
 
 }
 
@@ -36,12 +36,15 @@ font-style: normal;
 font-weight: normal;
 font-size: 16px;
 color: #434242;
+margin-top: 32px;
+margin-bottom: 24px;
 }
 .plusListTitle{
     font-family: Montserrat;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
+margin-bottom: 16px;
 }
 
 .plusList {
@@ -49,17 +52,29 @@ font-size: 18px;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
-line-height: 140%;
+line-height: 22,4px;
 color: #434242;
+}
+.plusList ul {
+    list-style: none;
+    line-height: 240%;
 }
 
 .plusList ul li::before {
+    content: "\2022";
+    display: inline-block;
+    width: 10px;
+    font-weight: bold;
    color: #961914;
 }
 
+
 .detailDescription{
-display: flex;
-justify-content: space-around;
+    display: grid;
+background: center / cover no-repeat url('../../images/detailBackground.svg');
+grid-template-columns: 448px 448px;
+padding: 32px 80px;
+gap: 143px;
 }
 
 .detailInfo{
@@ -73,10 +88,32 @@ justify-content: space-around;
 }
 
 .detailPoint span {
+    display: block;
     font-family: Montserrat;
 font-style: normal;
 font-weight: 500;
 font-size: 18px;
 line-height: 250%;
 margin-left: 16px;
+color: #434242;
+}
+.detailTitle {
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 200%;
+    margin-bottom: 16px;
+    color: #000000;
+}
+
+.image{
+    margin-top: 180px;
+    margin-bottom: 80px;
+}
+
+.image img {
+    max-height: 523px;
+    max-width: 588px;
 }

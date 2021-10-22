@@ -1,13 +1,8 @@
 
 
 .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vw;
-    height: 90vh;
+    display: grid;
     background: center / cover no-repeat url('../../images/mainPageBackground.png');
-
 }
 
 .button {
@@ -24,10 +19,10 @@
 
 .info{
     display: grid;
-    max-width: 50vw;
-    justify-content: center;
-    margin-top: auto;
     margin-bottom: 30vh;
+    margin-top: 130px;
+    justify-content: center;
+    margin-right: 51vw;
 }
 
 .title{

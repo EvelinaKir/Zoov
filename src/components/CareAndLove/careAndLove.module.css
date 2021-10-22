@@ -1,0 +1,71 @@
+.mainBox{
+    background-color: #FFF4F3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 905px;
+    justify-content: center;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dog1{
+    margin-top: 80px;
+    margin-left: 120px;
+}
+
+.dog2{
+    z-index: 5;
+    transform: translate(315px, -200px);
+}
+
+.dogImage{
+    z-index: 5;
+    transform: translate(60px, -475px);
+    max-width: 183px;
+    max-height: 183px;
+}
+
+.heartImage{
+    z-index: 10;
+    transform: translate(535px, -840px);
+}
+.images{
+    background: center / cover no-repeat url('../../images/careAndLove/background.svg');
+    max-width: 676px;
+    max-height: 905px;
+    margin-right: 10vw;
+}
+
+.textHeader {
+    font-family: Oswald;
+font-style: normal;
+font-weight: bold;
+font-size: 46px;
+display: inline-block
+}
+
+.textContent span {
+    color: #434242;
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+
+}
+
+.textContent {
+    display: grid;
+    line-height: 130%;
+}
+
+.text{
+    display: grid;
+    max-width: 520px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
