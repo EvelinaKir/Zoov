@@ -1,8 +1,18 @@
 import styles from "./footer.module.css";
 import whatsApp from "../../images/footer/whatsApp.svg";
 import telegram from "../../images/footer/TelegramLogo.svg";
+import React, { SyntheticEvent } from "react";
+import { useState } from "react";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 export const Footer = () => {
+const [checked, setChecked] = useState<boolean>(false)
+
+const handleChange = (e: {target: HTMLInputElement}) => {
+  setChecked(e.target.checked)
+}
+
   return (
     <div className={styles.mainBox}>
       <div className={styles.upperFooter}>
@@ -45,9 +55,9 @@ export const Footer = () => {
             </div>
             <div className={styles.inputReady}>
               <div className={styles.checkbox}>
-                <input type="checkbox" />
+                <input type="checkbox" onChange={(e) => handleChange(e)}  />
                 <span>Даю согласие на обработку персональных данных</span>
-              <button className={styles.sendQuestion}>Отправить</button>
+              <button disabled={!checked} className={styles.sendQuestion}>Отправить</button>
               </div>  
             </div>
           </form>

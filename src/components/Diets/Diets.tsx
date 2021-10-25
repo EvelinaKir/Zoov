@@ -30,8 +30,8 @@ export const Diets = () => {
 };
 
 const DietsFeed = () => {
-  const res = foodList.map((elem) => {
-    return <Diet elem={elem} />;
+  const res = foodList.map((elem, i) => {
+    return <Diet elem={elem} key={i} />;
   });
   return <div className={classNames(styles.dietsFeed)}>{res}</div>;
 };

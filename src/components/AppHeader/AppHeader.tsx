@@ -3,7 +3,6 @@ import AppHeaderStyles from "./AppHeaderStyles.module.css";
 import icon from "../../images/icon.png";
 import React, {FunctionComponent} from "react";
 export const AppHeader: FunctionComponent<{moveable: boolean}>  = ({moveable}) => {
-  console.log(moveable)
   const style = moveable ? AppHeaderStyles.moveableBox : AppHeaderStyles.mainBox
   const navBarStyle = moveable ? AppHeaderStyles.moveableNavBar : AppHeaderStyles.navBar
   const logoStyle = moveable ? AppHeaderStyles.movableLogo : AppHeaderStyles.logo

@@ -5,15 +5,11 @@
     margin-top: 16px;
 }
 
-.movableLogo{
-    margin-top: 16px;
-    max-width: 62px;
-    max-height: 62px;
-}
 .navBar{
     display: flex;
     gap: 53px;
 }
+
 
 .navBar div a {
     color: white;
@@ -26,6 +22,7 @@
     margin-bottom: auto;
 }
 
+
 .points {
     font-family: Montserrat;
     font-style: normal;
@@ -36,4 +33,35 @@
 .points:hover {
     text-decoration: 2px underline;
     text-decoration-color: #961914;
+}
+
+
+.moveableBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: auto;
+    background-color: white;
+}
+
+.moveableNavBar{
+    display: flex;
+    gap: 53px; 
+}
+
+
+.moveableNavBar {
+    text-align: center;
+}
+
+
+.moveableNavBar div a {
+    text-align: center;
+}
+
+.movableLogo img{
+    margin-right: 30vw;
+    max-width: 80px;
+    max-height: 80px;
+    margin-top: 16px;
 }
