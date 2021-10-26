@@ -2,10 +2,13 @@ import classNames from "classnames";
 import AppHeaderStyles from "./AppHeaderStyles.module.css";
 import icon from "../../images/icon.png";
 import React, {FunctionComponent} from "react";
+
+
 export const AppHeader: FunctionComponent<{moveable: boolean}>  = ({moveable}) => {
   const style = moveable ? AppHeaderStyles.moveableBox : AppHeaderStyles.mainBox
   const navBarStyle = moveable ? AppHeaderStyles.moveableNavBar : AppHeaderStyles.navBar
   const logoStyle = moveable ? AppHeaderStyles.movableLogo : AppHeaderStyles.logo
+
   return (
     <div className={classNames(style)}>
       <div className={classNames(logoStyle)}>

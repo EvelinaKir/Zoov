@@ -1,0 +1,22 @@
+.ModalBackground {
+    z-index: 10;
+    display: block;
+    position: fixed;
+    bottom: 0; left: 0; top: 0; right: 0;
+    overflow: hidden;
+    opacity: 60%;
+    background-color: #9F9E9D;
+}
+
+.mainBox {
+    z-index: 1;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 720px;
+    max-width: 100%;
+    text-align: center;
+}

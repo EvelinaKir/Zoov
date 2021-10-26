@@ -2,8 +2,12 @@ import classNames from "classnames";
 import styles from "./diets.module.css";
 import React, { FunctionComponent } from "react";
 import { foodList } from "../../utils/diets";
+import { useAppSelector } from "../../services/hooks";
+import { useAppDispatch } from "../../services/hooks";
+import { modalSlice } from "../../services/reducers/modalReducers";
 
 export const Diets = () => {
+
   return (
     <div className={classNames(styles.mainBox)}>
       <div className={classNames(styles.header)}>
@@ -45,9 +49,14 @@ const Diet: FunctionComponent<{
     image: string;
   };
 }> = ({ elem }) => {
+
+  const {openDescription} = modalSlice.actions;
+  const dispatch = useAppDispatch()
+
+
   return (
     <div className={styles.diet}>
-      <img src={elem.image} alt="picture of food" />
+      <img src={elem.image} alt="picture of food" onClick={() => dispatch(openDescription(true))} />
       <span className={styles.dietFor}>{elem.for}</span>
       <span className={styles.dietType}>{elem.type}</span>
       <span className={styles.dietDescription}>{elem.description}</span>
