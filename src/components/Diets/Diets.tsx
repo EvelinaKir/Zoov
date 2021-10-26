@@ -5,7 +5,7 @@ import { foodList } from "../../utils/diets";
 import { useAppSelector } from "../../services/hooks";
 import { useAppDispatch } from "../../services/hooks";
 import { modalSlice } from "../../services/reducers/modalReducers";
-
+import { TDetailedFoodInfo } from "../../services/types/types";
 export const Diets = () => {
 
   return (
@@ -41,22 +41,19 @@ const DietsFeed = () => {
 };
 
 const Diet: FunctionComponent<{
-  elem: {
-    for: string;
-    type: string;
-    description: string;
-    weight: string;
-    image: string;
-  };
+  elem: TDetailedFoodInfo;
 }> = ({ elem }) => {
-
+const {writeDetail} = modalSlice.actions
   const {openDescription} = modalSlice.actions;
   const dispatch = useAppDispatch()
-
+  const handleModal = () => {
+    dispatch(writeDetail(elem))
+    dispatch(openDescription(true))
+  }
 
   return (
     <div className={styles.diet}>
-      <img src={elem.image} alt="picture of food" onClick={() => dispatch(openDescription(true))} />
+      <img src={elem.image} alt="picture of food" onClick={() => handleModal()} />
       <span className={styles.dietFor}>{elem.for}</span>
       <span className={styles.dietType}>{elem.type}</span>
       <span className={styles.dietDescription}>{elem.description}</span>

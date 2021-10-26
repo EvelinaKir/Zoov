@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import {TDetailedFoodInfo} from '../types/types'
 
 interface IModalState {
     smallThanks: boolean,
@@ -6,6 +7,7 @@ interface IModalState {
     description: boolean,
     order: boolean,
     countDiet: boolean,
+    fullDetailedInfo: TDetailedFoodInfo | null
 }
 
 const modalState: IModalState = {
@@ -14,6 +16,7 @@ const modalState: IModalState = {
     description: false,
     order: false,
     countDiet: false,
+    fullDetailedInfo: null,
 }
 
 export const modalSlice = createSlice({
@@ -41,6 +44,9 @@ export const modalSlice = createSlice({
             state.description = false;
             state.order = false;
             state.smallThanks = false;
+        },
+        writeDetail(state, action:PayloadAction<TDetailedFoodInfo>){
+            state.fullDetailedInfo = action.payload
         }
     }
 })

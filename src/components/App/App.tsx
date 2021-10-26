@@ -13,6 +13,7 @@ import { SyntheticEvent, useRef, useState } from 'react'
 import { useEffect } from "react";
 import { MainModal } from '../Modals/MainModal'
 import { useAppSelector } from '../../services/hooks'
+import { ModalDescription } from '../Modals/ModalDescription'
 
 export const App = () => {
 const mainRef = useRef<any>(null)
@@ -51,7 +52,9 @@ useEffect(() => {
             <HowToGetZoov/>
             <Questions/>
             <Footer/>
-            {description && (<MainModal children={(<div></div>)}/>)}
+            {description && (<MainModal>
+              <ModalDescription/>
+            </MainModal>)}
         </div>
     )
 }

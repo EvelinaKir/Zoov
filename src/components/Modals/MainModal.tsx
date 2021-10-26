@@ -9,7 +9,7 @@ import { modalSlice } from "../../services/reducers/modalReducers";
 import { useEffect, useCallback } from "react";
 
 
-export const MainModal: FunctionComponent<{children: any}> = ({
+export const MainModal: FunctionComponent<{children: React.ReactNode}> = ({
   children,
 }) => {
     const dispatch = useAppDispatch()
@@ -33,12 +33,14 @@ export const MainModal: FunctionComponent<{children: any}> = ({
   }, []);
 
   return ReactDom.createPortal(
+    <>
     <ModalBackground>
       <div className={styles.mainBox}>
-        <img src={esc} alt="escape button" onClick={closeModal} />
+        <img src={esc} alt="escape button" onClick={closeModal} className={styles.esc}/>
         <div className={styles.content}>{children}</div>
       </div>
-    </ModalBackground>,
+    </ModalBackground>
+    </>,
     modalRoot
   );
 };

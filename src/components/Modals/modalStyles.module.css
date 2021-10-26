@@ -4,19 +4,85 @@
     position: fixed;
     bottom: 0; left: 0; top: 0; right: 0;
     overflow: hidden;
-    opacity: 60%;
-    background-color: #9F9E9D;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .mainBox {
     z-index: 1;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(255, 255, 255);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
-    width: 720px;
+    z-index: 100;
     max-width: 100%;
-    text-align: center;
+}
+
+.esc {
+    margin-left: auto;
+}
+
+.modalDescription{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 43px;
+    padding: 56px;
+}
+
+.modalDescriptionAdditionalImages{
+    margin-top: 18px;
+    gap: 16px;
+    display: flex;
+}
+
+.modalDescriptionMainImage img {
+    width: 400px;
+}
+
+.modalDescriptionInfo button{
+    background-color: white;
+    border: none;
+    color: #961914;
+    border: 1px solid #961914;
+    padding: 13px 42px;
+    max-width: 160px;
+    font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 140%;
+    border-radius: 8px;
+    margin-top: 25px;
+    margin-right: 121px;
+    justify-self: center;
+}
+
+.modalDescriptionInfo button:hover{
+    background-color: #961914;
+    color: #FFFFFF;
+}
+
+.modalDescriptionInfo h1 {
+    font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 130%;
+}
+
+.modalDescriptionInfo h6 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 130%;
+    color: #9F9E9D;
+}
+
+.modalDescriptionDetails{
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 140%;
 }
