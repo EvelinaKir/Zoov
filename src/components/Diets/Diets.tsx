@@ -7,7 +7,6 @@ import { useAppDispatch } from "../../services/hooks";
 import { modalSlice } from "../../services/reducers/modalReducers";
 import { TDetailedFoodInfo } from "../../services/types/types";
 export const Diets = () => {
-
   return (
     <div className={classNames(styles.mainBox)}>
       <div className={classNames(styles.header)}>
@@ -43,22 +42,26 @@ const DietsFeed = () => {
 const Diet: FunctionComponent<{
   elem: TDetailedFoodInfo;
 }> = ({ elem }) => {
+  const order = modalSlice.actions.openOrder
 const {writeDetail} = modalSlice.actions
   const {openDescription} = modalSlice.actions;
   const dispatch = useAppDispatch()
-  const handleModal = () => {
+  const openModalInfo = () => {
     dispatch(writeDetail(elem))
     dispatch(openDescription(true))
   }
-
+const openModalorder = () => {
+  dispatch(writeDetail(elem))
+  dispatch(order(true))
+}
   return (
     <div className={styles.diet}>
-      <img src={elem.image} alt="picture of food" onClick={() => handleModal()} />
+      <img src={elem.image} alt="picture of food" onClick={() => openModalInfo()} />
       <span className={styles.dietFor}>{elem.for}</span>
       <span className={styles.dietType}>{elem.type}</span>
       <span className={styles.dietDescription}>{elem.description}</span>
       <span className={styles.dietWeight}>{elem.weight}</span>
-      <button className={styles.orderButton}>Заказать</button>
+      <button onClick={() => openModalorder()} className={styles.orderButton}>Заказать</button>
     </div>
   );
 };

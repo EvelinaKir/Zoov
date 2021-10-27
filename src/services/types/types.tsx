@@ -5,4 +5,6 @@ export type TDetailedFoodInfo = {
     weight: string;
     image: string;
     additionalList?: Array<any> | null
+    counter?: null | number
+    price?: number;
 }

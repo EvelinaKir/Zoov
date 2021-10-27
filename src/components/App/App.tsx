@@ -14,6 +14,7 @@ import { useEffect } from "react";
 import { MainModal } from '../Modals/MainModal'
 import { useAppSelector } from '../../services/hooks'
 import { ModalDescription } from '../Modals/ModalDescription'
+import { ModalOrder } from '../Modals/ModalOrder'
 
 export const App = () => {
 const mainRef = useRef<any>(null)
@@ -37,8 +38,8 @@ document.addEventListener('scroll', (e) => {handleScroll(e)})
 
 
 useEffect(() => {
-  console.log(description)
-  },[description])
+  console.log(order)
+  },[console.log(order)])
     return (
         <div className={classNames(styles.mainBox)} ref={mainRef}>
             <MainPage/>
@@ -54,6 +55,9 @@ useEffect(() => {
             <Footer/>
             {description && (<MainModal>
               <ModalDescription/>
+            </MainModal>)}
+            {order && (<MainModal>
+              <ModalOrder/>
             </MainModal>)}
         </div>
     )

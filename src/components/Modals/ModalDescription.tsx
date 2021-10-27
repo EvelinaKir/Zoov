@@ -1,10 +1,18 @@
 import styles from './modalStyles.module.css'
-import { useAppSelector } from '../../services/hooks'
+import { useAppDispatch, useAppSelector } from '../../services/hooks'
+import { modalSlice } from '../../services/reducers/modalReducers'
 
 export const ModalDescription = () => {
     
     const elem = useAppSelector(state => state.modalReducer.fullDetailedInfo)
     const exact = useAppSelector(state => state.modalReducer.fullDetailedInfo?.additionalList)
+    const dispatch = useAppDispatch()
+    const {closeAll, openOrder} = modalSlice.actions
+
+    const handleModal = () => {
+        dispatch(closeAll())
+        dispatch(openOrder(true))
+    }
     if (elem) {
     const right = exact!.map((elem, i) => {
     return (<img src={elem.addImage} alt="small image" key={i}/>)
@@ -24,7 +32,7 @@ export const ModalDescription = () => {
                     <span>{elem.description}</span>
                 </div>
                 <h6>{elem.weight}</h6>
-                <button>Заказать</button>
+                <button onClick={() => handleModal()}>Заказать</button>
             </div>
         </div>
     )}

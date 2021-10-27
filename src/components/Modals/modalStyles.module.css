@@ -16,16 +16,18 @@
     transform: translate(-50%, -50%);
     z-index: 100;
     max-width: 100%;
+    justify-content: center;
 }
 
 .esc {
     margin-left: auto;
+    margin-top: 17px;
+    margin-right: 20px;
 }
 
 .modalDescription{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 43px;
     padding: 56px;
 }
 
@@ -36,7 +38,8 @@
 }
 
 .modalDescriptionMainImage img {
-    width: 400px;
+    min-width: 351px;
+    min-height: 500px;
 }
 
 .modalDescriptionInfo button{
@@ -79,10 +82,212 @@ line-height: 130%;
     color: #9F9E9D;
 }
 
-.modalDescriptionDetails{
+.modalDescriptionDetails span{
     font-family: Montserrat;
 font-style: normal;
 font-weight: normal;
 font-size: 14px;
 line-height: 140%;
+}
+
+.modalDescriptionInfo{
+    margin-left: 43px;
+}
+
+.modalOrder{
+    display: flex;
+    padding: 56px;
+    gap: 45px;
+}
+
+.modalOrderOrderInfo form input, .modalOrderOrderInfo form select, .modalOrderOrderInfo form select option {
+    display: grid;
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 140%;
+color: black;
+}
+
+.modalOrderOrderInfo from input::-webkit-input-placeholder{
+opacity: 0.5;
+}
+
+.counterButtons input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  .counterButtons {
+      display: flex;
+      margin-right: auto;
+      margin-bottom: 30px;
+  }
+
+  .counterButtons .countButton{
+      z-index: 10;
+    background-color: hsl(180, 5%, 96%);
+    border: 1px solid #F4F5F5;
+    border-radius: 8px;
+    color: #C4C4C4;
+    padding: 17px 16px;
+
+    font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 140%;
+  }
+
+  .counterButtons input {
+      margin-left: -40px;
+      margin-right: -40px;
+      border: none;
+      border-radius: 8px;
+      color: #F4F5F5;
+      background-color: #F4F5F5;
+      text-align: center;
+
+  }
+
+  .counterButtons input:focus{
+    outline: none;
+  }
+
+
+.userInfo input {
+    display: flex;
+    flex-direction: column;
+    min-width: 364px;
+    border: none;
+    border-radius: 8px;
+    color: #F4F5F5;
+    background-color: #F4F5F5;
+    padding: 16px 17px;
+    margin-bottom: 16px;
+}
+
+
+.counter {
+    display: flex;
+}
+.counter span {
+    margin-right: auto;
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 140%;
+margin-top: auto;
+margin-bottom: auto;
+}
+
+.modalOrderOrderInfo form select {
+    min-width: 364px;
+    border: none;
+    border-radius: 8px;
+    color: #F4F5F5;
+    font-family: Montserrat;
+    width: 400px;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 140%;
+color: black;
+padding: 16px 17px;
+-webkit-appearance: none;
+  -moz-appearance: none;
+    background: center / contain no-repeat  #F4F5F5 url('../../images/modals/select.svg');
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      15px 15px,
+      15px 15px,
+      11px 1.5em;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+  }
+
+
+.modalOrderImage img{
+    min-width: 351px;
+    min-height: 500px;
+}
+
+.modalOrderOrderInfo h1 {
+    font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 130%;
+}
+
+.modalOrderOrderInfo h6 {
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 130%;
+color: #9F9E9D;
+}
+
+.checkbox{
+    display: flex;
+}
+
+.orderButton button{
+    background-color: white;
+    border: none;
+    color: #961914;
+    border: 1px solid #961914;
+    padding: 13px 42px;
+    font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 140%;
+    border-radius: 8px;
+    margin-top: 25px;
+    margin-right: 121px;
+    width: 249px;
+}
+
+.orderButton button:hover{
+    background-color: #961914;
+    color: #FFFFFF;
+}
+
+.orderButton span {
+    font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 130%;
+margin-right: 65px;
+margin-top: auto;
+margin-bottom: auto;
+transform: translateY(10px);
+}
+
+.orderButton{
+    display: flex;
+}
+
+.orderButton button:disabled{
+    background-color: rgb(156, 156, 156);
+    border: none;
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 13px 42px;
+    font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 140%;
+    border-radius: 8px;
+    margin-top: 25px;
+    margin-right: 121px;
+    width: 249px;
 }

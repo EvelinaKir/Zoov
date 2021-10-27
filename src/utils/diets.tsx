@@ -6,6 +6,7 @@ export const foodList = [
       "Подходит для ежедвеного кормления. Богат животными белками и Омега-3.",
     weight: "700г / 500г / 300г / 150г / 100г",
     image: "../src/images/diets/1.png",
+    price: 2345,
     additionalList: [
       {
         addImage: "../src/images/diets/additionalLiver.png",
@@ -25,6 +26,7 @@ export const foodList = [
       "Подходит для ежедвеного кормления. Богат животными белками и Омега-3.",
     weight: "700г / 500г / 300г / 150г / 100г",
     image: "../src/images/diets/2.png",
+    price: 234,
     additionalList: [
       {
         addImage: "../src/images/diets/additionalLiver.png",
@@ -44,6 +46,7 @@ export const foodList = [
       "Подходит для ежедвеного кормления. Богат животными белками и Омега-3.",
     weight: "700г / 500г / 300г / 150г / 100г",
     image: "../src/images/diets/3.png",
+    price: 125,
     additionalList: [
       {
         addImage: "../src/images/diets/additionalLiver.png",
@@ -63,6 +66,7 @@ export const foodList = [
       "Подходит для ежедвеного кормления. Богат животными белками и Омега-3.",
     weight: "700г / 500г / 300г / 150г / 100г",
     image: "../src/images/diets/4.png",
+    price: 135,
     additionalList: [
       {
         addImage: "../src/images/diets/additionalLiver.png",

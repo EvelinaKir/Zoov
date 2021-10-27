@@ -55,7 +55,7 @@ const handleChange = (e: {target: HTMLInputElement}) => {
             </div>
             <div className={styles.inputReady}>
               <div className={styles.checkbox}>
-                <input type="checkbox" onChange={(e) => handleChange(e)}  />
+                <input type="checkbox" onChange={(e) => handleChange(e)} checked={checked}  />
                 <span>Даю согласие на обработку персональных данных</span>
               <button disabled={!checked} className={styles.sendQuestion}>Отправить</button>
               </div>  
