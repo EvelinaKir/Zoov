@@ -15,6 +15,7 @@ import { MainModal } from '../Modals/MainModal'
 import { useAppSelector } from '../../services/hooks'
 import { ModalDescription } from '../Modals/ModalDescription'
 import { ModalOrder } from '../Modals/ModalOrder'
+import { ModalBigThanks } from '../Modals/ModalBigThanks'
 
 export const App = () => {
 const mainRef = useRef<any>(null)
@@ -58,6 +59,9 @@ useEffect(() => {
             </MainModal>)}
             {order && (<MainModal>
               <ModalOrder/>
+            </MainModal>)}
+            {bigThanks && (<MainModal>
+              <ModalBigThanks/>
             </MainModal>)}
         </div>
     )

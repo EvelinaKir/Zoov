@@ -1,13 +1,20 @@
 import { useState } from "react";
-import { useAppSelector } from "../../services/hooks";
+import { useAppDispatch, useAppSelector } from "../../services/hooks";
+import { modalSlice } from "../../services/reducers/modalReducers";
 import styles from "./modalStyles.module.css";
 
 export const ModalOrder = () => {
+  const dispatch = useAppDispatch()
+  const {closeAll, openBigThanks} = modalSlice.actions
   const info = useAppSelector((state) => state.modalReducer.fullDetailedInfo);
   const [counter, setCounter] = useState<number>(1);
   const [checked, setChecked] = useState<boolean>(false)
   const handleChange = (e: {target: HTMLInputElement}) => {
     setChecked(e.target.checked)
+  }
+  const makeOrder = () => {
+    dispatch(closeAll())
+    dispatch(openBigThanks(true))
   }
   if (info) {
     return (
@@ -67,7 +74,7 @@ export const ModalOrder = () => {
             <span>Даю согласие на обработку персональных данных</span>
             </div>
             <div className={styles.orderButton}>
-            <span>{`${info.price}₽`}</span><button disabled={!checked}>Оформить заказ</button>
+            <span>{`${info.price}₽`}</span><button onClick={() => makeOrder()} disabled={!checked}>Оформить заказ</button>
             </div>
           </form>
         </div>

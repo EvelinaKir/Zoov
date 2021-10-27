@@ -8,7 +8,6 @@ interface IModalState {
     order: boolean,
     countDiet: boolean,
     fullDetailedInfo: TDetailedFoodInfo | null
-    price: number | null
 }
 
 const modalState: IModalState = {
@@ -18,7 +17,6 @@ const modalState: IModalState = {
     order: false,
     countDiet: false,
     fullDetailedInfo: null,
-    price: null
 }
 
 export const modalSlice = createSlice({
