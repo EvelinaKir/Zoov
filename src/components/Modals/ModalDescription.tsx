@@ -30,6 +30,7 @@ export const ModalDescription = () => {
                 <h6>{elem.type}</h6>
                 <div className={styles.modalDescriptionDetails}>
                     <span>{elem.description}</span>
+                    <span className={styles.modalDescriptionDetails__consistence}> <strong>Состав:</strong> {elem.consistence}</span>
                 </div>
                 <h6>{elem.weight}</h6>
                 <button onClick={() => handleModal()}>Заказать</button>

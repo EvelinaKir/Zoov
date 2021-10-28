@@ -1,331 +1,509 @@
 .ModalBackground {
-    z-index: 10;
-    display: block;
-    position: fixed;
-    bottom: 0; left: 0; top: 0; right: 0;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .mainBox {
-    z-index: 1;
-    position: fixed;
-    background-color: rgb(255, 255, 255);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    max-width: 100%;
-    justify-content: center;
+  z-index: 1;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  max-width: 100%;
+  justify-content: center;
 }
 
 .esc {
-    margin-left: auto;
-    margin-top: 17px;
-    margin-right: 20px;
+  margin-left: auto;
+  margin-top: 17px;
+  margin-right: 20px;
 }
 
-.modalDescription{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 56px;
+.modalDescription {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 56px;
 }
 
-.modalDescriptionAdditionalImages{
-    margin-top: 18px;
-    gap: 16px;
-    display: flex;
+.modalDescriptionAdditionalImages {
+  margin-top: 18px;
+  gap: 16px;
+  display: flex;
 }
 
 .modalDescriptionMainImage img {
-    min-width: 351px;
-    min-height: 500px;
+  min-width: 351px;
+  min-height: 500px;
 }
 
-.modalDescriptionInfo button{
-    background-color: white;
-    border: none;
-    color: #961914;
-    border: 1px solid #961914;
-    padding: 13px 42px;
-    max-width: 160px;
-    font-family: Montserrat;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 140%;
-    border-radius: 8px;
-    margin-top: 25px;
-    margin-right: 121px;
-    justify-self: center;
+.modalDescriptionInfo button {
+  background-color: white;
+  border: none;
+  color: #961914;
+  border: 1px solid #961914;
+  padding: 13px 42px;
+  max-width: 160px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  border-radius: 8px;
+  margin-top: 25px;
+  margin-right: 121px;
+  justify-self: center;
 }
 
-.modalDescriptionInfo button:hover{
-    background-color: #961914;
-    color: #FFFFFF;
+.modalDescriptionInfo button:hover {
+  background-color: #961914;
+  color: #ffffff;
 }
 
 .modalDescriptionInfo h1 {
-    font-family: Montserrat;
-font-style: normal;
-font-weight: bold;
-font-size: 20px;
-line-height: 130%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 130%;
 }
 
 .modalDescriptionInfo h6 {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 130%;
-    color: #9F9E9D;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 130%;
+  color: #9f9e9d;
 }
 
-.modalDescriptionDetails span{
-    font-family: Montserrat;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 140%;
+.modalDescriptionDetails span {
+  display: block;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
 }
 
-.modalDescriptionInfo{
-    margin-left: 43px;
+.modalDescriptionDetails__consistence {
+  margin-top: 4vh;
 }
 
-.modalOrder{
-    display: flex;
-    padding: 56px;
-    gap: 45px;
+.modalDescriptionInfo {
+  margin-left: 43px;
 }
 
-.modalOrderOrderInfo form input, .modalOrderOrderInfo form select, .modalOrderOrderInfo form select option {
-    display: grid;
-    font-family: Montserrat;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 140%;
-color: black;
+.modalOrder {
+  display: flex;
+  padding: 56px;
+  gap: 45px;
 }
 
-.modalOrderOrderInfo from input::-webkit-input-placeholder{
-opacity: 0.5;
+.modalOrderOrderInfo form input,
+.modalOrderOrderInfo form select,
+.modalOrderOrderInfo form select option {
+  display: grid;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  color: black;
 }
 
-.counterButtons input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
+.modalOrderOrderInfo form input::-webkit-input-placeholder {
+  opacity: 0.5;
+}
 
-  .counterButtons {
-      display: flex;
-      margin-right: auto;
-      margin-bottom: 30px;
-  }
+.counterButtons input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 
-  .counterButtons .countButton{
-      z-index: 10;
-    background-color: hsl(180, 5%, 96%);
-    border: 1px solid #F4F5F5;
-    border-radius: 8px;
-    color: #C4C4C4;
-    padding: 17px 16px;
+.counterButtons {
+  display: flex;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
 
-    font-family: Montserrat;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 140%;
-  }
+.counterButtons .countButton {
+  z-index: 10;
+  background-color: hsl(180, 5%, 96%);
+  border: 1px solid #f4f5f5;
+  border-radius: 8px;
+  color: #c4c4c4;
+  padding: 17px 16px;
 
-  .counterButtons input {
-      margin-left: -40px;
-      margin-right: -40px;
-      border: none;
-      border-radius: 8px;
-      color: #F4F5F5;
-      background-color: #F4F5F5;
-      text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+}
 
-  }
+.counterButtons input {
+  margin-left: -40px;
+  margin-right: -40px;
+  border: none;
+  border-radius: 8px;
+  color: #f4f5f5;
+  background-color: #f4f5f5;
+  text-align: center;
+}
 
-  .counterButtons input:focus{
-    outline: none;
-  }
-
+.counterButtons input:focus {
+  outline: none;
+}
 
 .userInfo input {
-    display: flex;
-    flex-direction: column;
-    min-width: 364px;
-    border: none;
-    border-radius: 8px;
-    color: #F4F5F5;
-    background-color: #F4F5F5;
-    padding: 16px 17px;
-    margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  min-width: 364px;
+  border: none;
+  border-radius: 8px;
+  color: #f4f5f5;
+  background-color: #f4f5f5;
+  padding: 16px 17px;
+  margin-bottom: 16px;
 }
-
 
 .counter {
-    display: flex;
+  display: flex;
 }
 .counter span {
-    margin-right: auto;
-    font-family: Montserrat;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 140%;
-margin-top: auto;
-margin-bottom: auto;
+  margin-right: auto;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .modalOrderOrderInfo form select {
-    min-width: 364px;
-    border: none;
-    border-radius: 8px;
-    color: #F4F5F5;
-    font-family: Montserrat;
-    width: 400px;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 140%;
-color: black;
-padding: 16px 17px;
--webkit-appearance: none;
+  min-width: 364px;
+  border: none;
+  border-radius: 8px;
+  color: #f4f5f5;
+  font-family: Montserrat;
+  width: 400px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  color: black;
+  padding: 16px 17px;
+  -webkit-appearance: none;
   -moz-appearance: none;
-    background: center / contain no-repeat  #F4F5F5 url('../../images/modals/select.svg');
-    background-position:
-      calc(100% - 20px) calc(1em + 2px),
-      calc(100% - 15px) calc(1em + 2px),
-      calc(100% - 2.5em) 0.5em;
-    background-size:
-      15px 15px,
-      15px 15px,
-      11px 1.5em;
-    background-repeat: no-repeat;
-    margin-bottom: 30px;
-  }
+  background: center / contain no-repeat #f4f5f5
+    url("../../images/modals/select.svg");
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 15px 15px, 15px 15px, 11px 1.5em;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}
 
-
-.modalOrderImage img{
-    min-width: 351px;
-    min-height: 500px;
+.modalOrderImage img {
+  min-width: 351px;
+  min-height: 500px;
 }
 
 .modalOrderOrderInfo h1 {
-    font-family: Montserrat;
-font-style: normal;
-font-weight: bold;
-font-size: 20px;
-line-height: 130%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 130%;
 }
 
 .modalOrderOrderInfo h6 {
-    font-family: Montserrat;
-font-style: normal;
-font-weight: normal;
-font-size: 15px;
-line-height: 130%;
-color: #9F9E9D;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 130%;
+  color: #9f9e9d;
 }
 
-.checkbox{
-    display: flex;
+.checkbox {
+  display: flex;
 }
 
-.checkbox span {
-    font-family: Montserrat;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 140%;
-    color: #9F9E9D;
-    margin-left: 5px;
+.checkbox label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 140%;
+  color: #9f9e9d;
+  margin-left: 5px;
 }
 
-.orderButton button{
-    background-color: white;
-    border: none;
-    color: #961914;
-    border: 1px solid #961914;
-    padding: 13px 42px;
-    font-family: Montserrat;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 140%;
-    border-radius: 8px;
-    margin-top: 25px;
-    margin-right: 121px;
-    width: 249px;
+.orderButton button {
+  background-color: white;
+  border: none;
+  color: #961914;
+  border: 1px solid #961914;
+  padding: 13px 42px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  border-radius: 8px;
+  margin-top: 25px;
+  margin-right: 121px;
+  width: 249px;
 }
 
-.orderButton button:hover{
-    background-color: #961914;
-    color: #FFFFFF;
+.orderButton button:hover {
+  background-color: #961914;
+  color: #ffffff;
 }
 
 .orderButton span {
-    font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 130%;
-margin-right: 65px;
-margin-top: auto;
-margin-bottom: auto;
-transform: translateY(10px);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  margin-right: 65px;
+  margin-top: auto;
+  margin-bottom: auto;
+  transform: translateY(10px);
 }
 
-.orderButton{
-    display: flex;
+.orderButton {
+  display: flex;
 }
 
-.orderButton button:disabled{
-    background-color: rgb(156, 156, 156);
-    border: none;
-    color: #000000;
-    border: 1px solid #000000;
-    padding: 13px 42px;
-    font-family: Montserrat;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 140%;
-    border-radius: 8px;
-    margin-top: 25px;
-    margin-right: 121px;
-    width: 249px;
+.orderButton button:disabled {
+  background-color: rgb(156, 156, 156);
+  border: none;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 13px 42px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  border-radius: 8px;
+  margin-top: 25px;
+  margin-right: 121px;
+  width: 249px;
 }
 
-.modalBigThanks{
- display: flex;
+.modalBigThanks {
+  display: flex;
 }
 
-.modalBigThanksText h1{
-    font-family: Oswald;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 130%;
-    margin-bottom: 22px;
-    color: #961914;
+.modalBigThanksText h1 {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 130%;
+  margin-bottom: 22px;
+  color: #961914;
 }
 
 .modalBigThanks h4 {
-    font-family: Montserrat;
-font-style: normal;
-font-weight: normal;
-font-size: 15px;
-line-height: 130%;
-margin-top: 10px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 130%;
+  margin-top: 10px;
 }
 
-.modalBigThanksText{
-    margin-left: 45px;
-    max-width: 373px;
+.modalBigThanksText {
+  margin-left: 45px;
+  max-width: 373px;
+}
+
+
+
+.modalCountDiet {
+  display: flex;
+  flex-direction: column;
+  max-width: 436px;
+  margin: 8px 56px 56px;
+}
+
+.modalCountDiet__Inputs form {
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+}
+.modalCountDiet__Inputs form input, .modalCountDiet__Inputs form textarea {
+    font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.modalCountDiet__Inputs form button {
+    background-color: #961914;
+    border: none;
+    color: #FFFFFF;
+    padding: 13px 42px;
+    font-family: Montserrat;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-top: 25px;
+    margin-right: 121px;
+    transform: translateY(-10px);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.modalCountDiet__Inputs form button:disabled {
+    background-color: #a0a0a0;
+    border: none;
+    color: #000000;
+    padding: 13px 42px;
+    font-family: Montserrat;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-top: 25px;
+    margin-right: 121px;
+    transform: translateY(-10px);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.modalCountDiet__Inputs form input, .modalCountDiet__Inputs form textarea {
+    display: grid;
+  border: none;
+  border-radius: 8px;
+  color: #f4f5f5;
+  background-color: #f4f5f5;
+  padding: 16px 17px;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #000000;
+}
+
+.modalCountDiet__Inputs form input::-webkit-input-placeholder, .modalCountDiet__Inputs form textarea::-webkit-input-placeholder {
+    opacity: 0.5;
+  }
+  
+  .modalCountDiet__Inputs input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+
+.modalCountDiet h1 {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 130%;
+  color: #961914;
+  margin-bottom: 16px;
+}
+
+.modalCountDiet h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 130%;
+}
+
+.modalSmallThanks {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.modalSmallThanks h1 {
+  color: #961914;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 130%;
+  margin-bottom: 16px;
+  margin-top: 21px;
+}
+
+.modalSmallThanks h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 130%;
+  margin: 0px 45px 76px;
+}
+
+.modalCountDiet__Inputs_radio{
+    display: flex;
+    margin-right: auto;
+}
+.modalCountDiet__Inputs_radio span {
+    margin-left: 8px;
+}
+
+.modalCountDiet__Inputs_radio:nth-child(1){
+margin-top: 28px;
+}
+
+.ModalCountDiet__checkbox{
+    display: flex;
+}
+
+.ModalCountDiet__checkbox span {
+    margin-left: 8px;
+}
+
+.modalError {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 54px;
+  text-align: center;
+}
+
+.modalError h1 {
+  color: #961914;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 130%;
+  margin-bottom: 16px;
+  margin-top: 21px;
+}
+
+.modalError h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130%;
+  margin: 0px 45px 76px;
+}
+.modalError h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+  margin: 0px 45px 76px;
 }

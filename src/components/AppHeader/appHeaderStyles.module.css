@@ -1,5 +1,5 @@
 
-.logo img{
+.logo{
     max-width: 80px;
     max-height: 80px;
     margin-top: 16px;
@@ -7,7 +7,8 @@
 
 .navBar{
     display: flex;
-    gap: 53px;
+    text-align: center;
+    gap: 5vw;
 }
 
 
@@ -20,6 +21,8 @@
     align-items: center;
     justify-content: space-around;
     margin-bottom: auto;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 
@@ -38,28 +41,24 @@
 
 .moveableBox{
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
     margin-bottom: auto;
     background-color: white;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .moveableNavBar{
     display: flex;
-    gap: 53px; 
-}
-
-
-.moveableNavBar {
     text-align: center;
+    gap: 5vw;
 }
 
 
-.moveableNavBar div a {
-    text-align: center;
-}
 
-.movableLogo img{
+
+.movableLogo{
     max-width: 80px;
     max-height: 80px;
     margin-top: 16px;

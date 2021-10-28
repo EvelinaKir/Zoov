@@ -5,16 +5,43 @@ import React, { SyntheticEvent } from "react";
 import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { modalSlice } from "../../services/reducers/modalReducers";
+import { useAppDispatch } from "../../services/hooks";
 
 export const Footer = () => {
+  const emailRef = useRef<HTMLInputElement>(null)
+  const nameRef = useRef<HTMLInputElement>(null)
+  const questionRef = useRef<HTMLTextAreaElement>(null)
+  const {openSmallThanks, openError} = modalSlice.actions
 const [checked, setChecked] = useState<boolean>(false)
-
+const [email, setEmail] = useState<string>('')
+const [name, setName] = useState<string>('')
+const [question, setQuestion] = useState<string>('')
+const dispatch = useAppDispatch()
 const handleChange = (e: {target: HTMLInputElement}) => {
   setChecked(e.target.checked)
 }
 
+const validateEmail = (email: string) => {
+  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+const sendQuestion = (e: any) => {
+  e.preventDefault()
+  if (validateEmail(email)) {
+dispatch(openSmallThanks(true))
+setEmail('')
+setName('')
+setQuestion('')}
+
+  dispatch(openError(true))
+}
+
+
+
   return (
-    <div className={styles.mainBox}>
+    <div className={styles.mainBox} id={'contacts'}>
       <div className={styles.upperFooter}>
         <div className={styles.contacts}>
           <span className={styles.contactsTitle}>Контакты</span>
@@ -47,17 +74,17 @@ const handleChange = (e: {target: HTMLInputElement}) => {
           </div>
           <form>
             <div className={styles.userInfo}>
-              <input type="text" placeholder="Имя" />
-              <input type="email" placeholder="Email" />
+              <input ref={nameRef} type="text" placeholder="Имя" value={name} onChange={() => {nameRef.current ? setName(nameRef.current.value) : setName('')}} />
+              <input ref={emailRef} type="email" placeholder="Email" value={email} onChange={() => {emailRef.current ? setEmail(emailRef.current.value) : setEmail('')}} />
             </div>
-            <div className={styles.inputQestion}>
-                <textarea rows={10} cols={87} placeholder='Ваш вопрос...'/>
+            <div className={styles.inputQestion} >
+                <textarea ref={questionRef} rows={10} cols={87} value={question} placeholder='Ваш вопрос...'  onChange={() => {questionRef.current ? setQuestion(questionRef.current.value) : setQuestion('')}}/>
             </div>
             <div className={styles.inputReady}>
               <div className={styles.checkbox}>
-                <input type="checkbox" onChange={(e) => handleChange(e)} checked={checked}  />
-                <span>Даю согласие на обработку персональных данных</span>
-              <button disabled={!checked} className={styles.sendQuestion}>Отправить</button>
+                <input id={'checkboxFooter'} type="checkbox" onChange={(e) => handleChange(e)} checked={checked}  />
+                <label htmlFor="checkboxFooter">Даю согласие на обработку персональных данных</label>
+              <button disabled={!checked} onClick={(e) => sendQuestion(e)} className={styles.sendQuestion}>Отправить</button>
               </div>  
             </div>
           </form>

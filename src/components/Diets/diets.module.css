@@ -1,6 +1,9 @@
 .mainBox {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
 
 }
 
@@ -72,6 +75,10 @@ margin-bottom: 54px;
     margin-top: 25px;
     margin-right: 121px;
     transform: translateY(-10px);
+}
+
+.countButton:hover {
+    background-color: #75110D;
 }
 .dietsFeed{
     display: flex;

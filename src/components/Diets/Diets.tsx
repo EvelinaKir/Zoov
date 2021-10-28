@@ -7,8 +7,12 @@ import { useAppDispatch } from "../../services/hooks";
 import { modalSlice } from "../../services/reducers/modalReducers";
 import { TDetailedFoodInfo } from "../../services/types/types";
 export const Diets = () => {
+
+  const countDiet = modalSlice.actions.openCountDiet
+  const dispatch = useAppDispatch()
+
   return (
-    <div className={classNames(styles.mainBox)}>
+    <div className={classNames(styles.mainBox)} id={'diets'}>
       <div className={classNames(styles.header)}>
         <span className={styles.mainHeader}>Рационы ZOOOV</span>
         <span className={styles.subHeader}>
@@ -26,7 +30,7 @@ export const Diets = () => {
           Рассчитаем в каком количестве нужно
           <br /> кормить вашего хвостика рационами Zooov
         </span>
-        <button className={styles.countButton}>Расчитать</button>
+        <button onClick={() => dispatch(countDiet(true))} className={styles.countButton}>Расчитать</button>
       </div>
     </div>
   );

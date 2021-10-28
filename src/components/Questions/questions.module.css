@@ -2,6 +2,8 @@
     display: flex;
     justify-self: center;
     margin-bottom: 180px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .title{

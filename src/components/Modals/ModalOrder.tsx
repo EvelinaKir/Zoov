@@ -70,8 +70,8 @@ export const ModalOrder = () => {
               </div>
             </div>
             <div className={styles.checkbox}>
-            <input type="checkbox" onChange={(e) => handleChange(e)} checked={checked} />
-            <span>Даю согласие на обработку персональных данных</span>
+            <input id={'checkboxOrder'} type="checkbox" onChange={(e) => handleChange(e)} checked={checked} />
+            <label htmlFor="checkboxOrder">Даю согласие на обработку персональных данных</label>
             </div>
             <div className={styles.orderButton}>
             <span>{`${info.price}₽`}</span><button onClick={() => makeOrder()} disabled={!checked}>Оформить заказ</button>

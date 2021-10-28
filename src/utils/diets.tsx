@@ -7,6 +7,7 @@ export const foodList = [
     weight: "700г / 500г / 300г / 150г / 100г",
     image: "../src/images/diets/1.png",
     price: 2345,
+    consistence: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi iure eum adipisci, perferendis sint explicabo ducimus sequi nam autem expedita amet delectus et libero corporis laborum. Id facilis ut perferendis.',
     additionalList: [
       {
         addImage: "../src/images/diets/additionalLiver.png",
@@ -27,6 +28,7 @@ export const foodList = [
     weight: "700г / 500г / 300г / 150г / 100г",
     image: "../src/images/diets/2.png",
     price: 234,
+    consistence: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi iure eum adipisci, perferendis sint explicabo ducimus sequi nam autem expedita amet delectus et libero corporis laborum. Id facilis ut perferendis.',
     additionalList: [
       {
         addImage: "../src/images/diets/additionalLiver.png",
@@ -47,6 +49,7 @@ export const foodList = [
     weight: "700г / 500г / 300г / 150г / 100г",
     image: "../src/images/diets/3.png",
     price: 125,
+    consistence: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi iure eum adipisci, perferendis sint explicabo ducimus sequi nam autem expedita amet delectus et libero corporis laborum. Id facilis ut perferendis.',
     additionalList: [
       {
         addImage: "../src/images/diets/additionalLiver.png",
@@ -67,6 +70,7 @@ export const foodList = [
     weight: "700г / 500г / 300г / 150г / 100г",
     image: "../src/images/diets/4.png",
     price: 135,
+    consistence: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi iure eum adipisci, perferendis sint explicabo ducimus sequi nam autem expedita amet delectus et libero corporis laborum. Id facilis ut perferendis.',
     additionalList: [
       {
         addImage: "../src/images/diets/additionalLiver.png",

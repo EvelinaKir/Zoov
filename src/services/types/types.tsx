@@ -7,4 +7,5 @@ export type TDetailedFoodInfo = {
     additionalList?: Array<any> | null
     counter?: null | number
     price?: number;
+    consistence?: string;
 }

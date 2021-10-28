@@ -6,7 +6,7 @@ import heartImage from "../../images/careAndLove/heartImage.png";
 
 export const CareAndLove = () => {
   return (
-    <div className={styles.mainBox}>
+    <div className={styles.mainBox} id={'AboutUs'}>
       <div className={styles.images}>
         <img className={styles.dog1} src={dog1} alt="dog with food" />
         <img className={styles.dog2} src={dog2} alt="two dogs with food" />

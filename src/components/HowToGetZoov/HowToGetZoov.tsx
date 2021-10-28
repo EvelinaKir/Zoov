@@ -8,7 +8,7 @@ import arrow from '../../images/howToGetZoov/Arrow.svg'
 
 export const HowToGetZoov = () => {
     return (
-        <div className={styles.mainBox}> <div className={styles.mainBox}>
+        <div className={styles.mainBox}> <div className={styles.mainBox} id={'delivery'}>
         <span className={styles.header}>Как получить ZOOOV?</span>
         <div className={styles.reasonsList}>
           <div className={styles.reason}>

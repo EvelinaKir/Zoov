@@ -7,7 +7,8 @@ interface IModalState {
     description: boolean,
     order: boolean,
     countDiet: boolean,
-    fullDetailedInfo: TDetailedFoodInfo | null
+    fullDetailedInfo: TDetailedFoodInfo | null,
+    error: boolean
 }
 
 const modalState: IModalState = {
@@ -17,6 +18,7 @@ const modalState: IModalState = {
     order: false,
     countDiet: false,
     fullDetailedInfo: null,
+    error: false,
 }
 
 export const modalSlice = createSlice({
@@ -44,10 +46,15 @@ export const modalSlice = createSlice({
             state.description = false;
             state.order = false;
             state.smallThanks = false;
+            state.error = false;
         },
         writeDetail(state, action:PayloadAction<TDetailedFoodInfo>){
             state.fullDetailedInfo = action.payload
+        },
+        openError(state, action:PayloadAction<boolean>){
+            state.error = action.payload
         }
+
     }
 })
 

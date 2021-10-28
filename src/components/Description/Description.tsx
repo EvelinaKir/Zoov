@@ -12,7 +12,7 @@ import fruitIcon from "../../images/fruitIcon.svg";
 
 export const Description = () => {
   return (
-    <div className={classNames(styles.mainBox)}>
+    <div className={classNames(styles.mainBox)} id={'BARF'}>
       <div className={classNames(styles.textDescription)}>
         <div className={classNames(styles.text)}>
           <span className={classNames(styles.title)}>Что такое BARF</span>

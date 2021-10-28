@@ -5,7 +5,7 @@ import minus from "../../images/questions/minus.svg";
 import plus from "../../images/questions/plus.svg";
 export const Questions = () => {
   return (
-    <div className={styles.mainBox}>
+    <div className={styles.mainBox} id={'FAQ'}>
       <div className={styles.title}>
         <span>Частые вопросы</span>
       </div>

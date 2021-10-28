@@ -2,6 +2,7 @@ import classNames from "classnames";
 import AppHeaderStyles from "./AppHeaderStyles.module.css";
 import icon from "../../images/icon.png";
 import React, {FunctionComponent} from "react";
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 export const AppHeader: FunctionComponent<{moveable: boolean}>  = ({moveable}) => {
@@ -11,79 +12,79 @@ export const AppHeader: FunctionComponent<{moveable: boolean}>  = ({moveable}) =
 
   return (
     <div className={classNames(style)}>
-      <div className={classNames(logoStyle)}>
-        <img src={icon} alt="icon of dog with smile" />
-      </div>
+
+        <Link smooth to={'#mainPage'}><img className={logoStyle} src={icon} alt="icon of dog with smile" /></Link>
+
       <div className={classNames(navBarStyle)}>
         <div>
-          <a
+          <Link smooth
             className={classNames(
               AppHeaderStyles.points
             )}
-            href="#"
+            to={'#BARF'}
           >
             BARF
-          </a>
+          </Link>
         </div>
         <div>
-          <a
+          <Link smooth
             className={classNames(
               AppHeaderStyles.points
             )}
-            href="#"
+            to={'#diets'}
           >
             Рационы
-          </a>
+          </Link>
         </div>
         <div>
-          <a
+          <Link smooth
             className={classNames(
               AppHeaderStyles.points
             )}
-            href="#"
+            to={'#zooov'}
           >
             ZOOOV
-          </a>
+          </Link>
         </div>
         <div>
-          <a
+          <Link smooth
             className={classNames(
               AppHeaderStyles.points
             )}
-            href="#"
+            to={'#AboutUs'}
           >
             О нас
-          </a>
+          </Link>
         </div>
         <div>
-          <a
+          <Link smooth
             className={classNames(
               AppHeaderStyles.points
             )}
-            href="#"
+            to={'#delivery'}
           >
             Доставка
-          </a>
+          </Link>
         </div>
         <div>
-          <a
+          <Link smooth
             className={classNames(
               AppHeaderStyles.points
             )}
-            href="#"
+            to={'#FAQ'}
           >
             FAQ
-          </a>
+          </Link>
         </div>
         <div>
-          <a
+          <Link smooth
             className={classNames(
               AppHeaderStyles.points
             )}
-            href="#"
+            to={'#contacts'}
           >
             Контакты
-          </a>
+          </Link>
         </div>
       </div>
     </div>

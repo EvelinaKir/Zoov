@@ -6,7 +6,7 @@ import smiley from "../../images/reasonsIcons/Smiley.svg";
 
 export const WhyZoov = () => {
   return (
-    <div className={styles.mainBox}>
+    <div className={styles.mainBox} id={'zooov'}>
       <span className={styles.header}>Почему ZOOOV</span>
       <div className={styles.reasonsList}>
         <div className={styles.reason}>
