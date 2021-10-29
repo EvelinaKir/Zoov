@@ -3,6 +3,7 @@ import AppHeaderStyles from "./AppHeaderStyles.module.css";
 import icon from "../../images/icon.png";
 import React, {FunctionComponent} from "react";
 import { HashLink as Link } from 'react-router-hash-link';
+import { MobileMenu } from "../MobileMenu/MobileMenu";
 
 
 export const AppHeader: FunctionComponent<{moveable: boolean}>  = ({moveable}) => {
@@ -14,7 +15,7 @@ export const AppHeader: FunctionComponent<{moveable: boolean}>  = ({moveable}) =
     <div className={classNames(style)}>
 
         <Link smooth to={'#mainPage'}><img className={logoStyle} src={icon} alt="icon of dog with smile" /></Link>
-
+        <div className={AppHeaderStyles.mobileMenu}><MobileMenu movable={moveable}/></div>
       <div className={classNames(navBarStyle)}>
         <div>
           <Link smooth

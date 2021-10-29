@@ -44,7 +44,7 @@ export const App = () => {
 
   return (
     <div className={classNames(styles.mainBox)} ref={mainRef}>
-      <MainPage />
+      <MainPage showMenu={visible} />
       <div className={visible ? styles.visible : styles.none}>
         <div>
           <AppHeader moveable={true} />

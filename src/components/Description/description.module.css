@@ -120,3 +120,41 @@ color: #434242;
     max-height: 523px;
     max-width: 588px;
 }
+
+
+@media screen and (max-width: 1219px) {
+
+
+   .textDescription{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       
+   }
+
+   .text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding: 0 5vw;
+}
+
+.image{
+    margin: 0 5vw 5vh 5vw;
+}
+.image img {
+    width: 90vw;
+}
+
+.detailDescription{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.detailInfo{
+    flex-wrap: nowrap;
+    max-height: none;
+}
+   }

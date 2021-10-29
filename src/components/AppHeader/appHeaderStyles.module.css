@@ -9,6 +9,8 @@
     display: flex;
     text-align: center;
     gap: 5vw;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 
@@ -22,7 +24,8 @@
     justify-content: space-around;
     margin-bottom: auto;
     max-width: 1440px;
-    margin: 0 auto;
+    margin: auto;
+    padding: 0 5vw;
 }
 
 
@@ -47,6 +50,7 @@
     background-color: white;
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 5vw;
 }
 
 .moveableNavBar{
@@ -62,4 +66,21 @@
     max-width: 80px;
     max-height: 80px;
     margin-top: 16px;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+@media screen and (max-width: 1219px) {
+    .navBar  {
+        display: none;
+    }
+    .moveableNavBar {
+        display: none;
+    }
+    .mobileMenu {
+        display: block;
+        margin-left: auto;
+    }
 }

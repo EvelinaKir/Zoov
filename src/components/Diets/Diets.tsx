@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import styles from "./diets.module.css";
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useRef } from "react";
 import { foodList } from "../../utils/diets";
 import { useAppSelector } from "../../services/hooks";
 import { useAppDispatch } from "../../services/hooks";
@@ -40,7 +40,14 @@ const DietsFeed = () => {
   const res = foodList.map((elem, i) => {
     return <Diet elem={elem} key={i} />;
   });
-  return <div className={classNames(styles.dietsFeed)}>{res}</div>;
+  const feedRef = useRef<HTMLDivElement>(null)
+  const firstElem = feedRef.current?.clientWidth
+
+  console.log(firstElem)
+
+
+  return (<div ref={feedRef} className={classNames(styles.dietsFeed)}>{res}</div>)
+  
 };
 
 const Diet: FunctionComponent<{
