@@ -36,12 +36,12 @@ export const Diets = () => {
   );
 };
 
-const DietsFeed = () => {
+const DietsFeed = () => { 
   const res = foodList.map((elem, i) => {
     return <Diet elem={elem} key={i} />;
   });
   const feedRef = useRef<HTMLDivElement>(null)
-  const firstElem = feedRef.current?.clientWidth
+  const firstElem = feedRef.current?.childNodes[0]
 
   console.log(firstElem)
 

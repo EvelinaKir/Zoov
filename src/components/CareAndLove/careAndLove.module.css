@@ -69,3 +69,52 @@ font-size: 16px;
 
 
 }
+
+
+@media screen and (max-width: 1219px) {
+.mainBox {
+    display: flex;
+    flex-direction:column-reverse;
+    max-height: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.images{
+    max-width: 90vw;
+    justify-self: center;
+}
+
+.dog1{
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70vw;
+}
+
+.dog2{
+    z-index: 5;
+    transform: translate(50vw, -17vh);
+    max-width: 45vw;
+}
+
+.dogImage{
+    z-index: 5;
+    transform: translate(10vw, -65vw);
+    max-width: 30vw;
+}
+
+.heartImage{
+    z-index: 10;
+    transform: translate(75vw, -66vh);
+    max-width: 20vw;
+}
+
+.text{
+    margin-bottom: 10vh;
+}
+
+.textHeader{
+    margin-bottom: 5vh;
+}
+}
