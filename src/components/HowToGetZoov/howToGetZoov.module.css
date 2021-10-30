@@ -54,3 +54,27 @@ line-height: 140%;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
+
+
+@media screen and (max-width: 1219px) {
+    
+    .mainBox{
+        margin: 0 auto;
+        padding: 0 5vw;
+    }
+    
+    .reasonsList {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reason{
+        justify-content: center;
+        max-width: 295px;
+    }
+
+    .arrow{
+        transform: translate(30vw, 20vh) rotate(90deg) scale(2);
+    }
+
+}

@@ -7,6 +7,7 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { modalSlice } from "../../services/reducers/modalReducers";
 import { useAppDispatch } from "../../services/hooks";
+import classNames from "classnames";
 
 export const Footer = () => {
   const emailRef = useRef<HTMLInputElement>(null)
@@ -78,12 +79,15 @@ setQuestion('')}
               <input ref={emailRef} type="email" placeholder="Email" value={email} onChange={() => {emailRef.current ? setEmail(emailRef.current.value) : setEmail('')}} />
             </div>
             <div className={styles.inputQestion} >
-                <textarea ref={questionRef} rows={10} cols={87} value={question} placeholder='Ваш вопрос...'  onChange={() => {questionRef.current ? setQuestion(questionRef.current.value) : setQuestion('')}}/>
+                <textarea ref={questionRef} value={question} placeholder='Ваш вопрос...'  onChange={() => {questionRef.current ? setQuestion(questionRef.current.value) : setQuestion('')}}/>
             </div>
             <div className={styles.inputReady}>
               <div className={styles.checkbox}>
-                <input id={'checkboxFooter'} type="checkbox" onChange={(e) => handleChange(e)} checked={checked}  />
+                <div className={classNames(styles.checkbox, styles.checkboxMain)}>
+                  <input id={'checkboxFooter'} type="checkbox" onChange={(e) => handleChange(e)} checked={checked}  />
                 <label htmlFor="checkboxFooter">Даю согласие на обработку персональных данных</label>
+                </div>
+                
               <button disabled={!checked} onClick={(e) => sendQuestion(e)} className={styles.sendQuestion}>Отправить</button>
               </div>  
             </div>

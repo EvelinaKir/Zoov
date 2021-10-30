@@ -14,7 +14,7 @@ export const HowToGetZoov = () => {
           <div className={styles.reason}>
               <div className={styles.images}>
              <img src={box} alt="icon of box" /> 
-             <img src={arrow} alt="arrow" />    
+             <img src={arrow} alt="arrow" className={styles.arrow} />    
               </div>
             <span className={styles.reasonHeader}>Закажите рацион</span>{" "}
             <span className={styles.reasonText}>
@@ -25,7 +25,7 @@ export const HowToGetZoov = () => {
           <div className={styles.reason}>
           <div className={styles.images}>
           <img src={phone} alt="icon of phone" />
-             <img src={arrow} alt="arrow" />    
+             <img src={arrow} alt="arrow" className={styles.arrow} />    
               </div>
             <span className={styles.reasonHeader}>Подтвердите заказ</span>{" "}
             <span className={styles.reasonText}>
@@ -36,7 +36,7 @@ export const HowToGetZoov = () => {
           <div className={styles.reason}>
           <div className={styles.images}>
           <img src={clock} alt="icon of watch" />{" "}
-             <img src={arrow} alt="arrow" />    
+             <img src={arrow} alt="arrow"  className={styles.arrow}/>    
               </div>
             <span className={styles.reasonHeader}>Ожидайте доставки</span>
             <span className={styles.reasonText}>

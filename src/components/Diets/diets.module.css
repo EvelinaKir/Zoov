@@ -146,11 +146,67 @@ line-height: 140%;
     margin-right: 121px;
 }
 
-.orderButton:hover{
+.orderButton:hover{ 
     background-color: #961914;
     color: #FFFFFF;
 }
 
 @media screen and (max-width: 1219px) {
+.header{
+    flex-direction: column;
+    margin-top: 5vh;
+}   
+.header span{
+    margin: 5vh auto;
+}
+.subHeader{
+    margin: auto;
+    max-width: none;
+    max-width: 90vw;
+}
+
+.dietsFeed{
+    max-width: 280px;
+    overflow: hidden;
+}
+
+.diet:nth-child(n+2){
+    opacity: 0.5;
+}
+
+.diets{
+    margin: 0 auto;
+}
+
+.mainBox{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.diet{
+    text-align: center;
+}
+
+.orderButton {
+   margin: 0 auto;
+}
+
+.diet img {
+    min-width: 280px;
+}
+
+.count{
+    margin-bottom: 5vh;
+    flex-direction: column;
+    text-align: center;
+
+}
+.countText {
+margin: 5vh;
+}
+
+.countButton {
+    margin: 0 auto 5vh;
+}
 
 }
