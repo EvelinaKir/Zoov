@@ -234,6 +234,7 @@ margin-right: auto;
     border-radius: 8px;
 }
 
+
 @media screen and (max-width: 1219px) {
     .upperFooter{
         display: flex;
@@ -271,3 +272,6 @@ margin-right: auto;
         margin-top: -1vh;
     }
 }
+
+
+
