@@ -4,4 +4,4 @@
 
 Стек: HTML + CSS, Javascript, Typescript, React, Redux Toolkit, react-router-dom, react-router-hash-link
 Статус pc версии: готово
-Статус мобильной версии: в процессе
+Статус мобильной версии: готово
