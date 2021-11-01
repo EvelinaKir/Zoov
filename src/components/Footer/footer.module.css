@@ -138,6 +138,11 @@ line-height: 140%;
     width: 306px;
 }
 
+.inputQestion textarea {
+    width: 45vw;
+    height: 20vh;
+}
+
 
 .userInfo input, .inputQestion textarea {
     background: rgba(255, 255, 255, 0.06);
@@ -228,5 +233,45 @@ margin-right: auto;
     line-height: 140%;
     border-radius: 8px;
 }
+
+
+@media screen and (max-width: 1219px) {
+    .upperFooter{
+        display: flex;
+        flex-direction: column;
+        padding: 0 5vw;
+    }
+
+    .contacts{
+        margin-bottom: 1vh;
+        gap: 0px;
+    }
+
+    .questionFieldHeader{
+        margin-top: 1vh;
+    }
+
+    .userInfo input:nth-child(1) {
+        margin-bottom: 1vh;
+    }
+
+    .inputQestion textarea {
+        width: 85vw;
+        height: 20vh;
+    }
+
+    .checkbox{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .checkboxMain{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2vh;
+        margin-top: -1vh;
+    }
+}
+
 
 
