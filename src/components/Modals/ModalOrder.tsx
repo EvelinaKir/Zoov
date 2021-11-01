@@ -9,12 +9,17 @@ export const ModalOrder = () => {
   const info = useAppSelector((state) => state.modalReducer.fullDetailedInfo);
   const [counter, setCounter] = useState<number>(1);
   const [checked, setChecked] = useState<boolean>(false)
+  const [selectValue, setSelectValue] = useState<string>('100г')
   const handleChange = (e: {target: HTMLInputElement}) => {
     setChecked(e.target.checked)
   }
   const makeOrder = () => {
     dispatch(closeAll())
     dispatch(openBigThanks(true))
+  }
+
+  const selectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectValue(e.target.value)
   }
   if (info) {
     return (
@@ -32,7 +37,7 @@ export const ModalOrder = () => {
               <input type="text" placeholder={"Адрес"} />
             </div>
 
-            <select name="wight selector">
+            <select name="wight selector" value={selectValue} onChange={(e) => selectChange(e)}>
               <option className={styles.option} value="700г">
                 700г
               </option>
@@ -45,7 +50,7 @@ export const ModalOrder = () => {
               <option className={styles.option} value="150г">
                 150г
               </option>
-              <option className={styles.option} value="100г" selected>
+              <option className={styles.option} value="100г">
                 100г
               </option>
             </select>
@@ -74,7 +79,7 @@ export const ModalOrder = () => {
             <label htmlFor="checkboxOrder">Даю согласие на обработку персональных данных</label>
             </div>
             <div className={styles.orderButton}>
-            <span>{`${info.price}₽`}</span><button onClick={() => makeOrder()} disabled={!checked}>Оформить заказ</button>
+            <span>{`${info.price! * counter}₽`}</span><button onClick={() => makeOrder()} disabled={!checked}>Оформить заказ</button>
             </div>
           </form>
         </div>

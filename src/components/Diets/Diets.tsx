@@ -6,13 +6,24 @@ import { useAppSelector } from "../../services/hooks";
 import { useAppDispatch } from "../../services/hooks";
 import { modalSlice } from "../../services/reducers/modalReducers";
 import { TDetailedFoodInfo } from "../../services/types/types";
-export const Diets = () => {
+import arrowLeft from '../../images/slider/arrowLeft.png'
+import arrowRight from '../../images/slider/arrowRight.png'
 
-  const countDiet = modalSlice.actions.openCountDiet
-  const dispatch = useAppDispatch()
+export const Diets = () => {
+  const countDiet = modalSlice.actions.openCountDiet;
+  const dispatch = useAppDispatch();
+  const res = foodList.map((elem, i) => {
+    return <Diet elem={elem} key={i} />;
+  });
+  const feedRef = useRef<HTMLDivElement>(null);
+  const dietsRef = useRef<HTMLDivElement>(null);
+
+  console.log('feedRef', feedRef.current?.offsetWidth);
+  console.log('dietsRef',dietsRef.current?.offsetWidth);
+ 
 
   return (
-    <div className={classNames(styles.mainBox)} id={'diets'}>
+    <div className={classNames(styles.mainBox)} id={"diets"}>
       <div className={classNames(styles.header)}>
         <span className={styles.mainHeader}>Рационы ZOOOV</span>
         <span className={styles.subHeader}>
@@ -22,57 +33,57 @@ export const Diets = () => {
           предпочтений вашего друга. ZOOOV заботится о каждой собаке.
         </span>
       </div>
-      <div className={classNames(styles.diets)}>
-        <DietsFeed />
+      <div ref={dietsRef} className={classNames(styles.diets)}>
+      <div ref={feedRef} className={classNames(styles.dietsFeed)}>
+        {res}
+      </div>
       </div>
       <div className={classNames(styles.count)}>
         <span className={styles.countText}>
           Рассчитаем в каком количестве нужно
           <br /> кормить вашего хвостика рационами Zooov
         </span>
-        <button onClick={() => dispatch(countDiet(true))} className={styles.countButton}>Расчитать</button>
+        <button
+          onClick={() => dispatch(countDiet(true))}
+          className={styles.countButton}
+        >
+          Расчитать
+        </button>
       </div>
     </div>
   );
 };
 
-const DietsFeed = () => { 
-  const res = foodList.map((elem, i) => {
-    return <Diet elem={elem} key={i} />;
-  });
-  const feedRef = useRef<HTMLDivElement>(null)
-  const firstElem = feedRef.current?.childNodes[0]
-
-  console.log(firstElem)
-
-
-  return (<div ref={feedRef} className={classNames(styles.dietsFeed)}>{res}</div>)
-  
-};
 
 const Diet: FunctionComponent<{
   elem: TDetailedFoodInfo;
 }> = ({ elem }) => {
-  const order = modalSlice.actions.openOrder
-const {writeDetail} = modalSlice.actions
-  const {openDescription} = modalSlice.actions;
-  const dispatch = useAppDispatch()
+  const order = modalSlice.actions.openOrder;
+  const { writeDetail } = modalSlice.actions;
+  const { openDescription } = modalSlice.actions;
+  const dispatch = useAppDispatch();
   const openModalInfo = () => {
-    dispatch(writeDetail(elem))
-    dispatch(openDescription(true))
-  }
-const openModalorder = () => {
-  dispatch(writeDetail(elem))
-  dispatch(order(true))
-}
+    dispatch(writeDetail(elem));
+    dispatch(openDescription(true));
+  };
+  const openModalorder = () => {
+    dispatch(writeDetail(elem));
+    dispatch(order(true));
+  };
   return (
     <div className={styles.diet}>
-      <img src={elem.image} alt="picture of food" onClick={() => openModalInfo()} />
+      <img
+        src={elem.image}
+        alt="picture of food"
+        onClick={() => openModalInfo()}
+      />
       <span className={styles.dietFor}>{elem.for}</span>
       <span className={styles.dietType}>{elem.type}</span>
       <span className={styles.dietDescription}>{elem.description}</span>
       <span className={styles.dietWeight}>{elem.weight}</span>
-      <button onClick={() => openModalorder()} className={styles.orderButton}>Заказать</button>
+      <button onClick={() => openModalorder()} className={styles.orderButton}>
+        Заказать
+      </button>
     </div>
   );
 };

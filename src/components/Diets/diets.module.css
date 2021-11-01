@@ -151,6 +151,14 @@ line-height: 140%;
     color: #FFFFFF;
 }
 
+.arrowLeft{
+    display: none;
+}
+
+.arrowRight{
+    display: none;
+}
+
 @media screen and (max-width: 1219px) {
 .header{
     flex-direction: column;
@@ -165,17 +173,15 @@ line-height: 140%;
     max-width: 90vw;
 }
 
-.dietsFeed{
-    max-width: 280px;
-    overflow: hidden;
-}
 
-.diet:nth-child(n+2){
-    opacity: 0.5;
-}
 
 .diets{
     margin: 0 auto;
+    max-width: 90vw;
+    overflow: scroll;
+}
+.diets::-webkit-scrollbar{
+    display: none;
 }
 
 .mainBox{
@@ -207,6 +213,17 @@ margin: 5vh;
 
 .countButton {
     margin: 0 auto 5vh;
+}
+
+.arrowLeft{
+    display: block;
+    transform: translate(-10px, -310px);
+    position:absolute;
+}
+
+.arrowRight{
+    display: block;
+    transform: translate(225px, -374px);
 }
 
 }

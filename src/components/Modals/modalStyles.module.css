@@ -507,3 +507,53 @@ margin-top: 28px;
   line-height: 130%;
   margin: 0px 45px 76px;
 }
+
+@media screen and (max-width: 1219px) {
+  .mainBox{
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  .modalDescription{
+    display: flex;
+    flex-direction: column;
+  }
+
+.modalDescriptionMainImage img{
+  min-width: auto;
+  min-height: auto;
+  margin-bottom: 4vh;
+}
+
+.modalOrderImage img {
+  min-width: auto;
+  min-height: auto;
+}
+
+.modalOrder{
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.userInfo input, .modalOrderOrderInfo form select{
+  min-width: 0px;
+  max-width:  200px;
+}
+
+.counter{
+  flex-direction: column;
+}
+
+.orderButton{
+  flex-direction: column;
+}
+
+
+.modalBigThanks {
+  flex-direction: column;
+  padding: 5vh 5vw;
+}
+}
